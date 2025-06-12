@@ -10,12 +10,12 @@ class UpdateCategoryRequest extends FormRequest
     {
         return true;
     }
-    
+
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:255|unique:categories,name,' . $this->route('category')->id,
-            'slug' => 'required|string|max:255|unique:categories,slug,' . $this->route('category')->id,
+            'name' => 'required|string|max:255|unique:categories,name,'.$this->route('category')->id,
+            'slug' => 'required|string|max:255|unique:categories,slug,'.$this->route('category')->id,
             'description' => 'nullable|string|max:1000',
         ];
     }

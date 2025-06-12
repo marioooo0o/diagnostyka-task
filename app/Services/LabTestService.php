@@ -49,7 +49,6 @@ class LabTestService
         abort_if($model->categories()
             ->exists(), Response::HTTP_FORBIDDEN, 'Lab test cannot be deleted because it is associated with categories.');
 
-
         return $model->delete();
     }
 }

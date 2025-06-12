@@ -8,15 +8,15 @@ class FilterByCreatedAt implements LabTestFilterStrategyInterface
 {
     public function apply(Builder $query, mixed $value): Builder
     {
-        if (!is_array($value)) {
+        if (! is_array($value)) {
             return $query;
         }
 
-        if (!empty($value['from'])) {
+        if (! empty($value['from'])) {
             $query->whereDate('created_at', '>=', $value['from']);
         }
 
-        if (!empty($value['to'])) {
+        if (! empty($value['to'])) {
             $query->whereDate('created_at', '<=', $value['to']);
         }
 

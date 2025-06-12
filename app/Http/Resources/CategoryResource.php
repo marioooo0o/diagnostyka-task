@@ -33,7 +33,7 @@ class CategoryResource extends JsonResource
             'description' => $this->description,
             'created_at' => $this->created_at->toDateTimeString(),
             'updated_at' => $this->updated_at->toDateTimeString(),
-            'lab_tests_exists' => $this->whenExistsLoaded('labTests', $this->lab_tests_exists)
+            'lab_tests_exists' => $this->whenExistsLoaded('labTests', $this->lab_tests_exists),
         ];
     }
 }

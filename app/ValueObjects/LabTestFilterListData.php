@@ -8,13 +8,11 @@ use Illuminate\Contracts\Support\Arrayable;
 final class LabTestFilterListData implements Arrayable
 {
     public function __construct(
-        public int     $perPage = Controller::PER_PAGE,
+        public int $perPage = Controller::PER_PAGE,
         public ?string $name = null,
         public ?string $createdFrom = null,
         public ?string $createdTo = null,
-    )
-    {
-    }
+    ) {}
 
     public static function fromValidated(array $data): self
     {

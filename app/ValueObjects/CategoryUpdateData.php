@@ -6,10 +6,7 @@ use Illuminate\Contracts\Support\Arrayable;
 
 final class CategoryUpdateData implements Arrayable
 {
-
-    public function __construct(public string $name, public string $slug, public ?string $description = null)
-    {
-    }
+    public function __construct(public string $name, public string $slug, public ?string $description = null) {}
 
     public static function fromValidated(array $data): self
     {

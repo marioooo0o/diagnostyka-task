@@ -45,7 +45,7 @@ class CategoryTest extends TestCase
         $name = 'Anemia';
         $data = [
             'name' => $name,
-            'slug' => 'anemia'
+            'slug' => 'anemia',
         ];
 
         $response = $this->postJson('/api/categories', $data);

@@ -7,9 +7,9 @@ class FilterStrategyFactory
     public static function make(string $key): ?LabTestFilterStrategyInterface
     {
         return match ($key) {
-            'name' => new FilterByName(),
+            'name' => new FilterByName,
             'slug' => new FilterByName('slug'),
-            'created_at' => new FilterByCreatedAt(),
+            'created_at' => new FilterByCreatedAt,
             default => null,
         };
     }

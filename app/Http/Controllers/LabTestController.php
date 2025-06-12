@@ -19,10 +19,7 @@ use Illuminate\Http\Response;
 
 class LabTestController extends Controller
 {
-
-    public function __construct(private readonly LabTestService $service)
-    {
-    }
+    public function __construct(private readonly LabTestService $service) {}
 
     public function index(FilterLabTestListRequest $request, LabTestFilterService $filterService): AnonymousResourceCollection
     {

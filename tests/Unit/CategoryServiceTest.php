@@ -21,7 +21,7 @@ class CategoryServiceTest extends TestCase
             description: 'Hematologia to dział medycyny zajmujący się chorobami krwi oraz układu krwiotwórczego.'
         );
 
-        $service = new CategoryService();
+        $service = new CategoryService;
         $test = $service->create($valueObject);
 
         $this->assertInstanceOf(Category::class, $test);
@@ -37,7 +37,7 @@ class CategoryServiceTest extends TestCase
             slug: 'nowa-nazwa',
         );
 
-        $service = new CategoryService();
+        $service = new CategoryService;
         $result = $service->update($category, $valueObject);
 
         $this->assertTrue($result);

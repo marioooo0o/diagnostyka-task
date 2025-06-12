@@ -6,16 +6,13 @@ use Illuminate\Contracts\Support\Arrayable;
 
 final class LabTestUpdateData implements Arrayable
 {
-
     public function __construct(
-        public string  $name,
-        public string  $slug,
+        public string $name,
+        public string $slug,
         public ?string $description,
         public ?string $testPreparation,
-        public array   $categories,
-    )
-    {
-    }
+        public array $categories,
+    ) {}
 
     public static function fromValidated(array $data): self
     {

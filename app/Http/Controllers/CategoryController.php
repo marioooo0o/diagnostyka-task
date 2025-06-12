@@ -14,10 +14,7 @@ use Illuminate\Http\Response;
 
 class CategoryController extends Controller
 {
-
-    public function __construct(private readonly CategoryService $service)
-    {
-    }
+    public function __construct(private readonly CategoryService $service) {}
 
     public function index(): AnonymousResourceCollection
     {
